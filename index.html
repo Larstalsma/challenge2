@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="utf-8" />
+		<title>Central Earthen Time</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- <link rel="icon" href="images/favicon.ico" type="image/x-icon" /> -->
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<script>
+			var now = new Date();
+	    	var hours = now.getHours();
+
+	    	//06:00 - 10:59 MORNING
+	        if (hours > 5 && hours < 11){
+	        document.write ('<body style="background-image: url(images/morning.svg); background-position: center center; background-repeat: no-repeat; background-attachment: fixed;"> <div style="color: #534b6d;">');
+	        }
+	        //11:00 - 15:59 DAY
+	        else if (hours > 10 && hours < 16){
+	        document.write ('<body style="background-image: url(images/day.svg); background-position: center center; background-repeat: no-repeat; background-attachment: fixed;"> <div style="color: #2b5260;">');
+	        }
+	        //16:00 - 19:59 AFTERNOON
+	        else if (hours > 15 && hours < 20){
+	        document.write ('<body style="background-image: url(images/afternoon.svg); background-position: center center; background-repeat: no-repeat; background-attachment: fixed;"> <div style="color: #751d08;">'); 
+	        }
+	        //20:00 - 23:59 EVENING
+	        else if (hours > 19 && hours < 24){
+	        document.write ('<body style="background-image: url(images/evening.svg); background-position: center center; background-repeat: no-repeat; background-attachment: fixed;"> <div style="color: #a2aa52;">'); 
+	        }
+	        //00:00 - 05:59 NIGHT
+	        else {
+	        document.write ('<body style="background-image: url(images/night.svg); background-position: center center; background-repeat: no-repeat; background-attachment: fixed;"> <div style="color: #ffffff;">'); 
+	        }
+	</script>
+	</head>
+	<body id="backgroundSize">
+		<div id="gridContainer">
+			<div id="main" class="clock"></div>
+			<div id="date"></div>
+		</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+	<script src="js/script.js"></script>
+	</body>
+</html>

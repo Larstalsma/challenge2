@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
+
+#backgroundSize{
+	background-size: 500% 100%;
+}
+
+#gridContainer{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 200px 200px;
+	grid-gap: 0;
+
+	grid-template-areas: 
+	"main"
+	"date";
+
+	font-family: Arial, sans-serif;
+	font-weight: none;
+	box-sizing: border-box;
+}
+
+#main{
+	grid-area: main;
+}
+
+.clock,#date {
+    font-family: Share Tech Mono;
+    letter-spacing: 3px;
+    margin: 0 auto;
+}
+
+.clock{
+	padding-top: 100px;
+	font-size: 2em;
+}
+
+#date{
+	grid-area: date;
+	font-size: 1.5em;
+}
+
+
+/* -------------------------------------------------------------------------TABLET------------------------------------------------------------------------- */
+
+
+@media only screen and (min-width: 720px) and (max-width: 1024px){
+	
+	#backgroundSize{
+		background-size: 300% 100%;
+		background-position: top left;
+	}
+
+	#gridContainer{
+		grid-template-rows: 1fr 1fr;
+	}
+
+	.clock{
+		padding-top: 250px;
+		font-size: 3.5em;
+	}
+
+	#date{
+		padding-top: 100px;
+		font-size: 2.5em;
+	}
+		
+}
+
+
+/* -------------------------------------------------------------------------LAPTOP------------------------------------------------------------------------- */
+
+
+@media only screen and (min-width: 1025px) and (max-width: 1439px){
+
+	#backgroundSize{
+		background-size: 160% 100%;
+	}
+
+	.clock{
+		padding-top: 150px;
+		font-size: 4em;
+	}
+
+	#date{
+		padding-top: 100px;
+		font-size: 2.8em;
+	}
+	
+}
+
+
+/* -------------------------------------------------------------------------DESKTOP------------------------------------------------------------------------- */
+
+
+@media only screen and (min-width: 1440px){
+
+	#backgroundSize{
+		background-size: 100% 100%;
+	}
+
+	.clock,#date {
+	    letter-spacing: 7px;
+	}
+
+	#date{
+		font-size: 4em;
+		padding-top: 150px;
+	}
+
+	.clock{
+		font-size: 6em;
+		padding-top: 150px;
+		margin: 0 auto;
+	}	
+}
