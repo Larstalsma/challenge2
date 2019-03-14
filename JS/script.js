@@ -37,7 +37,6 @@ function background() {
     if (hours > 5 && hours < 11){
         TweenMax.to('body', 1, {backgroundImage: 'url(images/morning.svg)', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed'});
         TweenMax.to('#gridContainer',1,{color: '#534b6d'});
-        //document.write ('<body style="background-image: url(images/morning.svg); background-position: center center; background-repeat: no-repeat; background-attachment: fixed;"> <div style="color: #534b6d;">');
     }
     //11:00 - 15:59 DAY
     else if (hours > 10 && hours < 16){
